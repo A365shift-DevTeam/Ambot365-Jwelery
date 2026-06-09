@@ -1,0 +1,28 @@
+# Force LF line endings for text files (prevents CRLF issues on Windows → Linux deploys like Vercel)
+* text=auto eol=lf
+
+# Shell scripts and bin shims must be LF + executable-friendly
+*.sh text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+
+# Vite / npm bin files are sensitive
+node_modules/.bin/* text eol=lf
+
+# Images and binary assets
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.webp binary
+
+# Lockfiles (keep as-is from the machine that generated them)
+package-lock.json text eol=lf
+yarn.lock text eol=lf
+pnpm-lock.yaml text eol=lf
