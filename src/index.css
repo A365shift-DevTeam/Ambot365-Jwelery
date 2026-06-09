@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Manrope', sans-serif;
+  --accent-gold: #D4AF37;
+  --bg-dark: #0a0a0a;
+}
+
+body { margin:0; background:#0a0a0a; color:#fff; font-family:'Manrope',sans-serif; }
