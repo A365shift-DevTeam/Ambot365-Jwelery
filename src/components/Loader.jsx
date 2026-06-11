@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-const FRAME_START = 31;
-const FRAME_END = 180;
-const TOTAL_FRAMES = FRAME_END - FRAME_START + 1; // 150 frames
+const FRAME_START = 1;
+const FRAME_END = 145;
+const TOTAL_FRAMES = FRAME_END - FRAME_START + 1; // 145 frames
 
 const Loader = ({ onLoaded }) => {
   const [progress, setProgress] = useState(0);
@@ -17,8 +17,8 @@ const Loader = ({ onLoaded }) => {
 
       for (let i = FRAME_START; i <= FRAME_END; i++) {
         const img = new Image();
-        const frameIndex = i.toString().padStart(3, '0');
-        img.src = `/frames/ezgif-frame-${frameIndex}.jpg`;
+        const frameIndex = i.toString().padStart(8, '0');
+        img.src = `/frames/${frameIndex}.jpg`;
         images.push(img);
 
         const promise = new Promise((resolve) => {
